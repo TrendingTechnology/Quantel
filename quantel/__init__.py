@@ -1,4 +1,5 @@
 import asyncio
+from typing import Union
 
 import aiohttp
 import requests
@@ -45,11 +46,15 @@ class Quantel(object):
 
 class Ticker:
 
-    def __init__(self, symbols: list, host: str, api_key: str, asynchronous: bool = False):
-        self.symbols = list(self._chunks(symbols, 30))
+    def __init__(self, symbols: Union[list, str], host: str, api_key: str, asynchronous: bool = False):
         self.asynchronous = asynchronous
         self.api_key = api_key
         self.host = host
+
+        if isinstance(symbols, str):
+            symbols = symbols.split(" ")
+
+        self.symbols = list(self._chunks(symbols, 30))
 
     def _get_data(self, endpoint):
 
