@@ -28,7 +28,7 @@ Some features of Quantel:
 
 ## Requirements
 
-Python 3.5+
+Python 3.6+
 
 - [Requests](https://requests.readthedocs.io/en/master/) - The elegant and simple HTTP library for Python, built for human beings.
 - [Aiohttp](https://docs.aiohttp.org/en/stable/) - Asynchronous HTTP Client/Server for asyncio and Python.
