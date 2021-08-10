@@ -39,7 +39,7 @@ class Quantel(object):
             """
             return True
 
-    def ticker(self, symbols: list, asynchronous: bool = False):
+    def ticker(self, symbols: Union[list, str], asynchronous: bool = False):
 
         return Ticker(symbols, self.host, self.api_key, asynchronous)
 
@@ -100,6 +100,7 @@ class Ticker:
     def _get_data_sync(self, session, endpoint, symbols):
 
         res = session.get(f"{self.host}{endpoint}/{symbols}")
+        print(res)
 
         if res.status_code == 200:
             return res.json()
