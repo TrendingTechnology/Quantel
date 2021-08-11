@@ -15,19 +15,19 @@ def test_quantel_income_statement_growth():
 
 
 def test_quantel_balance_sheet():
-    assert 'GOOG' in goog.balance_sheet_statement[0]['symbol']
+    assert 'GOOG' in goog.balance_sheet[0]['symbol']
 
 
 def test_quantel_balance_sheet_growth():
-    assert 'GOOG' in goog.balance_sheet_statement_growth[0]['symbol']
+    assert 'GOOG' in goog.balance_sheet_growth[0]['symbol']
 
 
 def test_quantel_cash_flow():
-    assert 'GOOG' in goog.cash_flow_statement[0]['symbol']
+    assert 'GOOG' in goog.cash_flow[0]['symbol']
 
 
 def test_quantel_cash_flow_growth():
-    assert 'GOOG' in goog.cash_flow_statement_growth[0]['symbol']
+    assert 'GOOG' in goog.cash_flow_growth[0]['symbol']
 
 
 def test_quantel_ratios():
@@ -64,3 +64,7 @@ def test_quantel_insider_transactions():
 
 def test_quantel_insider_transactions_summarized():
     assert 'GOOG' in goog.insider_transactions_summarized[0]['symbol']
+
+
+def test_quantel_share_ownership():
+    assert 'GOOG' in goog.share_ownership[0]['symbol']
