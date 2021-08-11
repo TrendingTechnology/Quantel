@@ -1,0 +1,37 @@
+site_name: Quantel
+
+repo_name: Quantel
+repo_url: https://github.com/ratherbland/Quantel
+
+theme:
+  name: "material"
+  icon:
+    repo: fontawesome/brands/github-alt
+  font:
+    text: PT Sans
+
+plugins:
+  - search
+  - mkdocstrings
+
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+
+nav:
+  - index.md
+  - User Guide:
+      - guide/intro.md
+  - Reference: reference/quantel-reference.md
