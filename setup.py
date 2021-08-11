@@ -13,7 +13,7 @@ setup(
     version="0.1",
     author="Guy M",
     author_email="guy@quantel.io",
-    description="Interact with the Quantel Financial API",
+    description="Interact with the Quantel Finance API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "quantel"
+author = "Guy M"
+author-email = "guy@quantel.io"
+home-page = "https://github.com/ratherbland/Quantel"
+classifiers = [
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+requires = [
+    "aiohttp >= 3.7.4.post0",
+    "requests >= 2.26.0"
+]
+description-file = "README.md"
+
+[tool.flit.metadata.urls]
+Documentation = "https://quantel.io/docs"
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest ==6.2.4",
+    "pytest-cov==2.10.1",
+    "coverage==5.2.1",
+]
+doc = [
+    "mkdocs >=1.1.2,<2.0.0",
+    "mkdocs-jupyter >=0.12.0,<0.13.0",
+    "mkdocs-material >=6.1.7,<7.0.0",
+]
