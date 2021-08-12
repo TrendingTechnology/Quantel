@@ -44,13 +44,17 @@ pip install quantel
 
 ## Example
 
+
 ```python
 from quantel import Quantel
 
+# Authenticate with the API
 qt = Quantel(api_key="<quantel-api-key>")
 
+# Instantiate the ticker class
 goog = qt.ticker('goog')
 
+# Retrieve company profile
 goog.profile
 ```
 
@@ -68,6 +72,23 @@ symbols = ['fb', 'aapl', 'amzn', 'nflx', 'goog']
 faang = qt.ticker(symbols)
 
 faang.profile
+```
+
+
+## International Example
+
+Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at https://quantel.io/docs/
+
+```python
+from quantel import Quantel
+
+qt = Quantel(api_key="<quantel-api-key>")
+
+symbols = ['DHER.DE', 'CBA.AX', 'DNB.OL', 'NESN.SW', 'ULVR.L', 'SHOP.TO', 'EDF.PA', ' RELIANCE.NS']
+
+international = qt.ticker(symbols)
+
+international.balance_sheet
 ```
 
 ## Asynchronous Example

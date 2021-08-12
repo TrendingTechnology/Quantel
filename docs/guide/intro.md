@@ -1,4 +1,4 @@
-# Quantel - Intro
+# Quickstart
 
 ## Import Quantel
 

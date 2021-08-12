@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="#"><img src="img/quantel.png"></a>
+    <img src="img/quantel.png">
 </p>
 <p align="center">
     <em>Official Python Library for the Quantel Finance API</em>
@@ -24,8 +24,7 @@
 
 Some features of Quantel:
 
-- **Fast**: Data is retrieved through API endpoints instead of web scraping. Additionally, asynchronous requests can be
-  utilized with simple configuration
+- **Fast**: Data is retrieved through API endpoints instead of web scraping. Additionally, asynchronous requests can be utilized with simple configuration
 - **Simple**: Data for multiple symbols can be retrieved with simple one-liners
 - **Lightweight**: Minimal reliance on third party packages
 - **Powerful**: 40+ years of historical financial data for almost 25k thousand companies across the globe
@@ -34,8 +33,7 @@ Some features of Quantel:
 
 Python 3.6+
 
-- [Requests](https://requests.readthedocs.io/en/master/) - The elegant and simple HTTP library for Python, built for
-  human beings.
+- [Requests](https://requests.readthedocs.io/en/master/) - The elegant and simple HTTP library for Python, built for human beings.
 - [Aiohttp](https://docs.aiohttp.org/en/stable/) - Asynchronous HTTP Client/Server for asyncio and Python.
 
 ## Installation
@@ -46,20 +44,23 @@ pip install quantel
 
 ## Example
 
+
 ```python
 from quantel import Quantel
 
+# Authenticate with the API
 qt = Quantel(api_key="<quantel-api-key>")
 
+# Instantiate the ticker class
 goog = qt.ticker('goog')
 
+# Retrieve company profile
 goog.profile
 ```
 
 ## Multiple Symbol Example
 
-The `ticker` class also makes it easy to retrieve data for a list of symbols with the same API. Simply pass a list of
-symbols as the argument to the `ticker` class.
+The `ticker` class also makes it easy to retrieve data for a list of symbols with the same API. Simply pass a list of symbols as the argument to the `ticker` class.
 
 ```python
 from quantel import Quantel
@@ -71,6 +72,23 @@ symbols = ['fb', 'aapl', 'amzn', 'nflx', 'goog']
 faang = qt.ticker(symbols)
 
 faang.profile
+```
+
+
+## International Example
+
+Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at [https://quantel.io/docs/](https://quantel.io/docs/)
+
+```python
+from quantel import Quantel
+
+qt = Quantel(api_key="<quantel-api-key>")
+
+symbols = ['DHER.DE', 'CBA.AX', 'DNB.OL', 'NESN.SW', 'ULVR.L', 'SHOP.TO', 'EDF.PA', ' RELIANCE.NS']
+
+international = qt.ticker(symbols)
+
+international.balance_sheet
 ```
 
 ## Asynchronous Example

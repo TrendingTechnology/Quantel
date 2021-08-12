@@ -63,7 +63,6 @@ class _Ticker:
     def _get_data_sync(self, session, endpoint, symbols):
 
         res = session.get(f"{self.host}{endpoint}/{symbols}")
-        print(res)
 
         if res.status_code == 200:
             return res.json()
@@ -227,6 +226,12 @@ class Quantel(object):
         Args:
             api_key: Quantel Finance API Key
             validate: Validate API Key
+
+        Example:
+
+            >>> from quantel import Quantel
+            >>>
+            >>> qt = Quantel(api_key="<quantel-api-key>")
         """
         self.api_key = api_key
         self.host = "https://quantel-io.p.rapidapi.com/"
@@ -253,7 +258,7 @@ class Quantel(object):
                 "Your API Key is invalid. You may have entered your API Key incorrectly, or have not subscribed to the API.\n"
                 "https://quantel.io/faq#invalid_api_key")
 
-        elif res.status_code is 503:
+        elif res.status_code == 503:
 
             raise GatewayError(
                 "Unable to connect to the API server. If the error persists, please reach out to the team at contact@quantel.io"
@@ -272,7 +277,12 @@ class Quantel(object):
             symbols: List of tickers, or space separated string
             asynchronous: Enable asynchronous lookup of tickers
 
+        Example:
+            >>> qt.ticker("GOOG")
+
         Returns:
+
+            Ticker class
 
         """
         return _Ticker(symbols, self.host, self.api_key, asynchronous)

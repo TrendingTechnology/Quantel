@@ -34,4 +34,7 @@ nav:
   - index.md
   - User Guide:
       - guide/intro.md
+      - Ticker:
+          - guide/ticker/financials.md
+
   - Reference: reference/quantel-reference.md
