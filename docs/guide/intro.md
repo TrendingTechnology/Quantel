@@ -14,7 +14,8 @@ Before we can pull information, we must instantiate the `Quantel` class and auth
 qt = Quantel(api_key="<quantel-api-key>")
 ```
 
-!!! note Your API key will be validated during the Quantel class instantiation.
+!!! note 
+    Your API key will be validated during the Quantel class instantiation.
 
 ## Create Instance
 
@@ -32,7 +33,8 @@ symbols = ['fb', 'aapl', 'amzn', 'nflx', 'goog']
 tickers = qt.ticker(symbols)
 ```
 
-!!! note Tickers parsed as uppercase or lowercase, it doesn't matter.
+!!! note 
+    Tickers parsed as uppercase or lowercase, it doesn't matter.
 
 They can also be passed in as a string:
 
@@ -42,10 +44,10 @@ symbols = 'FB AAPL AMZN NFLX GOOG'
 tickers = qt.ticker(symbols)
 ```
 
-!!! note The Quantel API supports parsing multiple tickers to the same endpoint
-e.g. `https://quantel-io.p.rapidapi.com/profile/FB,AAPL,AMZN,NFLX,GOOG`.
+!!! note 
+    The Quantel API supports parsing multiple tickers (up to 30) to the same endpoint e.g. `https://quantel-io.p.rapidapi.com/profile/FB,AAPL,AMZN,NFLX,GOOG`.
 
-    The Quantel Python library will handle ths automatically. As such, the below code will only make one request to the API.  
+    The Quantel Python library will handle this automatically. As such, the below code will only make one request to the API.  
 
 For example:
 

@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="#"><img src="docs/img/quantel.png"></a>
+    <img src="docs/img/quantel.png">
 </p>
 <p align="center">
     <em>Official Python Library for the Quantel Finance API</em>
