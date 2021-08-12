@@ -1,4 +1,5 @@
 site_name: Quantel
+site_url: https://quantel.io
 
 repo_name: Quantel
 repo_url: https://github.com/ratherbland/Quantel
@@ -9,6 +10,7 @@ theme:
     repo: fontawesome/brands/github-alt
   font:
     text: PT Sans
+  logo: https://quantel.io/images/icon.png
 
 plugins:
   - search
@@ -36,5 +38,6 @@ nav:
       - guide/intro.md
       - Ticker:
           - guide/ticker/financials.md
+          - guide/ticker/insights.md
 
   - Reference: reference/quantel-reference.md

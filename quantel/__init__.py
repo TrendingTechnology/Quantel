@@ -216,6 +216,15 @@ class _Ticker:
         """
         return self._get_data("share-ownership")
 
+    @property
+    def key_executives(self) -> List[Dict]:
+        """
+        Get key executives in org
+
+        Returns:
+        """
+        return self._get_data("key-executives")
+
 
 class Quantel(object):
 

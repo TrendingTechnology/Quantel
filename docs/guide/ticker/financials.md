@@ -1,3 +1,49 @@
+### **quote**
+
+=== "Details"
+
+    - *Description*:  Retrieves stock quote
+    - *Return*:  `List[Dict]`
+
+=== "Example"
+
+    ```python
+    from quantel import Quantel
+
+    qt = Quantel(api_key="<your-quantel-api-key>")
+
+    goog = qt.ticker('goog')
+    goog.quote
+    ```
+
+=== "Data"
+
+    ```python
+    [{'avgVolume': 1136007,
+      'change': -8.14,
+      'changesPercentage': -0.29,
+      'dayHigh': 2776.955,
+      'dayLow': 2747.0,
+      'earningsAnnouncement': None,
+      'eps': 92.187,
+      'exchange': 'NASDAQ',
+      'marketCap': 1827191914496.0,
+      'name': 'Alphabet Inc.',
+      'open': 2765.66,
+      'pe': 29.871784,
+      'previousClose': 2761.93,
+      'price': 2753.79,
+      'priceAvg200': 2325.6572,
+      'priceAvg50': 2644.9353,
+      'sharesOutstanding': 663518974,
+      'symbol': 'GOOG',
+      'timestamp': 1628770344,
+      'volume': 760483,
+      'yearHigh': 2800.22,
+      'yearLow': 1406.55}]
+    ...
+    ```
+
 ### **balance_sheet**
 
 === "Details"
@@ -304,5 +350,227 @@
      'salesMaturitiesOfInvestments': 133929000000,
      'stockBasedCompensation': 12991000000,
      'symbol': 'GOOG'},
+    ...
+    ```
+    
+   ### **cash_flow_growth**
+
+=== "Details"
+
+    - *Description*:  Retrieves cash flow statements growth by percentage data
+    - *Return*:  `List[Dict]`
+
+=== "Example"
+
+    ```python
+    from quantel import Quantel
+
+    qt = Quantel(api_key="<your-quantel-api-key>")
+
+    goog = qt.ticker('goog')
+    goog.cash_flow_growth
+    ```
+
+=== "Data"
+
+    ```python
+    [{'date': '2020-12-31',
+     'growthAccountsPayables': 0.6214953271028038,
+     'growthAccountsReceivables': 0.5032258064516129,
+     'growthAcquisitionsNet': -0.7065606361829025,
+     'growthCapitalExpenditure': -0.05380499405469679,
+     'growthCashAtBeginningOfPeriod': 0.10759834740434704,
+     'growthCashAtEndOfPeriod': 0.43069521029300467,
+     'growthChangeInWorkingCapital': 1.2307692307692308,
+     'growthCommonStockIssued': 0.0,
+     'growthCommonStockRepurchased': 0.6932485322896281,
+     'growthDebtRepayment': 2.58974358974359,
+     'growthDeferredIncomeTax': 7.034682080924855,
+     'growthDepreciationAndAmortization': 0.16263475087004498,
+     'growthDividendsPaid': 0.0,
+     'growthEffectOfForexChangesOnCash': -2.0434782608695654,
+     'growthFreeCashFlow': 0.38328167376985667,
+     'growthInventory': 0.0,
+     'growthInvestmentsInPropertyPlantAndEquipment': -0.05380499405469679,
+     'growthNetCashProvidedByOperatingActivites': 0.19449743213499635,
+     'growthNetCashUsedForInvestingActivites': 0.11128818961717134,
+     'growthNetCashUsedProvidedByFinancingActivities': 0.0516609935800767,
+     'growthNetChangeInCash': 3.433500278241514,
+     'growthNetIncome': 0.1725533587630667,
+     'growthOperatingCashFlow': 0.19449743213499635,
+     'growthOtherFinancingActivites': -1.6622516556291391,
+     'growthOtherInvestingActivites': -0.9964182249144061,
+     'growthOtherNonCashItems': -0.8288762830902215,
+     'growthOtherWorkingCapital': 0.09412520841677767,
+     'growthPurchasesOfInvestments': 0.19154032973317972,
+     'growthSalesMaturitiesOfInvestments': 0.36342257965998165,
+     'growthStockBasedCompensation': 0.2035390031498981,
+     'period': 'FY',
+     'symbol': 'GOOG'},
+    ...
+    ```
+    
+### **ratios**
+
+=== "Details"
+
+    - *Description*:  Retrieves all key financial ratios
+    - *Return*:  `List[Dict]`
+
+=== "Example"
+
+    ```python
+    from quantel import Quantel
+
+    qt = Quantel(api_key="<your-quantel-api-key>")
+
+    goog = qt.ticker('goog')
+    goog.ratios
+    ```
+
+=== "Data"
+
+    ```python
+    [{'assetTurnover': 0.57108217360833,
+     'capitalExpenditureCoverageRatio': -2.9228490642251246,
+     'cashConversionCycle': 41.81898753722751,
+     'cashFlowCoverageRatios': None,
+     'cashFlowToDebtRatio': 4.674418604651163,
+     'cashPerShare': 202.33517174821117,
+     'cashRatio': 0.4656543618256677,
+     'companyEquityMultiplier': 1.4361923934143361,
+     'currentRatio': 3.0667558151810534,
+     'date': '2020-12-31',
+     'daysOfInventoryOutstanding': 3.136005287258651,
+     'daysOfPayablesOutstanding': 24.075732899022803,
+     'daysOfSalesOutstanding': 62.758715148991655,
+     'debtEquityRatio': 0.436192393414336,
+     'debtRatio': 0.3037144573488186,
+     'dividendPaidAndCapexCoverageRatio': None,
+     'dividendPayoutRatio': None,
+     'dividendYield': None,
+     'ebitPerRevenue': 0.22585151785763202,
+     'ebtPerEbit': 1.1663594022899282,
+     'effectiveTaxRate': 0.16249324071378063,
+     'enterpriseValueMultiple': 22.353196298759674,
+     'fixedAssetTurnover': 1.8824979372937294,
+     'freeCashFlowOperatingCashFlowRatio': 0.6578680670720471,
+     'freeCashFlowPerShare': 63.41643205413999,
+     'grossProfitMargin': 0.5357837470620785,
+     'interestCoverage': 305.36296296296297,
+     'inventoryTurnover': 116.39010989010988,
+     'longTermDebtToCapitalization': 0.05891506960537222,
+     'netIncomePerEBT': 0.8375067592862194,
+     'netProfitMargin': 0.22061941520980458,
+     'operatingCashFlowPerShare': 96.3968844640621,
+     'operatingCashFlowSalesRatio': 0.35679105009121936,
+     'operatingCycle': 65.89472043625031,
+     'operatingProfitMargin': 0.22585151785763202,
+     'payablesTurnover': 15.160493827160494,
+     'payoutRatio': 0.0,
+     'period': 'FY',
+     'pretaxProfitMargin': 0.2634240413747007,
+     'priceBookValueRatio': 5.572798610271138,
+     'priceCashFlowRatio': 19.04356142012438,
+     'priceEarningsRatio': 30.797707763395664,
+     'priceEarningsToGrowthRatio': 1.6853173568441193,
+     'priceFairValue': 5.572798610271138,
+     'priceSalesRatio': 6.79457227656281,
+     'priceToBookRatio': 5.572798610271138,
+     'priceToFreeCashFlowsRatio': 28.94738682921784,
+     'priceToOperatingCashFlowsRatio': 19.04356142012438,
+     'priceToSalesRatio': 6.79457227656281,
+     'quickRatio': 2.9573494739064645,
+     'receivablesTurnover': 5.815925312261025,
+     'returnOnAssets': 0.12599181517821387,
+     'returnOnCapitalEmployed': 0.15687528065088172,
+     'returnOnEquity': 0.18094848659141563,
+     'shortTermCoverageRatios': None,
+     'symbol': 'GOOG',
+     'totalDebtToCapitalization': None}
+    ...
+    ```
+    
+### **key_metrics**
+
+=== "Details"
+
+    - *Description*:  Retrieves all key financial metrics
+    - *Return*:  `List[Dict]`
+
+=== "Example"
+
+    ```python
+    from quantel import Quantel
+
+    qt = Quantel(api_key="<your-quantel-api-key>")
+
+    goog = qt.ticker('goog')
+    goog.key_metrics
+    ```
+
+=== "Data"
+
+    ```python
+    [{'averageInventory': 863500000.0,
+     'averagePayables': 5575000000.0,
+     'averageReceivables': 29438000000.0,
+     'bookValuePerShare': 329.4107895118579,
+     'capexPerShare': -32.98045240992211,
+     'capexToDepreciation': -1.6267065780827918,
+     'capexToOperatingCashFlow': -0.34213193292795285,
+     'capexToRevenue': -0.12206961161910293,
+     'cashPerShare': 202.33517174821117,
+     'currentRatio': 3.0667558151810534,
+     'date': '2020-12-31',
+     'daysOfInventoryOnHand': 3.136005287258651,
+     'daysPayablesOutstanding': 24.075732899022803,
+     'daysSalesOutstanding': 62.758715148991655,
+     'debtToAssets': 0.3037144573488186,
+     'debtToEquity': 0.06260335034869509,
+     'dividendYield': None,
+     'earningsYield': 0.03246994898719511,
+     'enterpriseValue': 1227659893924.18,
+     'enterpriseValueOverEBITDA': 22.353196298759674,
+     'evToFreeCashFlow': 28.654853626594306,
+     'evToOperatingCashFlow': 18.851113167560037,
+     'evToSales': 6.725908462442159,
+     'freeCashFlowPerShare': 63.41643205413999,
+     'freeCashFlowYield': 0.03454543257737714,
+     'grahamNetNet': 94.02855611902034,
+     'grahamNumber': 664.67073354722,
+     'incomeQuality': 1.617224167473739,
+     'intangiblesToTotalAssets': 0.07077242691229475,
+     'interestCoverage': 305.36296296296297,
+     'interestDebtPerShare': 20.822046768563993,
+     'inventoryTurnover': 116.39010989010988,
+     'investedCapital': 0.06260335034869509,
+     'marketCap': 1240192893924.18,
+     'netCurrentAssetValue': 77224000000.0,
+     'netDebtToEBITDA': -0.2282005061816063,
+     'netIncomePerShare': 59.60638382905406,
+     'operatingCashFlowPerShare': 96.3968844640621,
+     'payablesTurnover': 15.160493827160494,
+     'payoutRatio': 0.0,
+     'pbRatio': 5.572798610271138,
+     'peRatio': 30.797707763395664,
+     'period': 'FY',
+     'pfcfRatio': 28.94738682921784,
+     'pocfratio': 19.04356142012438,
+     'priceToSalesRatio': 6.79457227656281,
+     'ptbRatio': 5.572798610271138,
+     'receivablesTurnover': 5.815925312261025,
+     'researchAndDdevelopementToRevenue': 0.15106258252203783,
+     'returnOnTangibleAssets': 0.135587684682622,
+     'revenuePerShare': 270.17741739714796,
+     'roe': 0.18094848659141563,
+     'roic': 0.15687528065088172,
+     'salesGeneralAndAdministrativeToRevenue': 0.060549946035381066,
+     'shareholdersEquityPerShare': 329.4107895118579,
+     'stockBasedCompensationToRevenue': 0.0711730319350014,
+     'symbol': 'GOOG',
+     'tangibleAssetValue': 199924000000.0,
+     'tangibleBookValuePerShare': 295.9285475338301,
+     'workingCapital': 117462000000.0},
     ...
     ```

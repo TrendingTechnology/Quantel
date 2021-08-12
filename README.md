@@ -12,11 +12,13 @@
 
 ---
 
-**Documentation**: <a target="_blank" href="https://quantel.io/docs">https://quantel.io/docs </a>
+**Documentation**: <a target="_blank" href="https://quantel.io/docs">quantel.io/docs </a>
 
 **Blog Posts**: WIP
 
-**Website**: <a target="_blank" href="https://quantel.io">https://quantel.io </a>
+**Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
+
+**Get API Key**: <a href="http://links.quantel.io/getstarted">links.quantel.io/getstarted </a>
 
 ---
 
