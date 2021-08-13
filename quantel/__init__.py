@@ -260,10 +260,12 @@ class Quantel(object):
         res = requests.get(self.host, headers=headers)
 
         if res.status_code in (401, 403):
-            """401 is an Unauthorized status code. 
+            """
+            401 is an Unauthorized status code. 
             403 is an Access Forbidden code.
             
-            Both indicate that the API key was not accepted by RapidAPI"""
+            Both indicate that the API key was not accepted by RapidAPI
+            """
             raise InvalidAPIKey(
                 "Your API Key is invalid. You may have entered your API Key incorrectly, or have not subscribed to the API.\n"
                 "https://quantel.io/faq#invalid_api_key")
@@ -275,7 +277,9 @@ class Quantel(object):
             )
 
         elif res.status_code == 404:
-            """404 not found indicates that RapidAPI accepted the API key in this case."""
+            """
+            404 not found indicates that RapidAPI accepted the API key in this case.
+            """
             return True
 
     def ticker(self, symbols: Union[list, str], asynchronous: bool = False) -> _Ticker:
