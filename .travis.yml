@@ -10,6 +10,7 @@ before_install:
   - pip install pytest==6.2.4
   - pip install attrs==21.2.0
   - pip install pytest-cov
+  - pip install .
 
 install:
   - pip install -r requirements.txt
