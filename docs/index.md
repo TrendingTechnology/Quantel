@@ -80,7 +80,7 @@ faang.profile
 
 ## International Example
 
-Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at [https://quantel.io/docs/](https://quantel.io/docs/)
+Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at [quantel.io/docs/](https://quantel.io/docs/)
 
 ```python
 from quantel import Quantel

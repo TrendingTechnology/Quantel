@@ -196,6 +196,8 @@ class _Ticker:
 
         Returns:
         """
+
+        # TODO: Add months parameter.
         return self._get_data("insider-transactions")
 
     @property
@@ -205,6 +207,7 @@ class _Ticker:
 
         Returns:
         """
+        # TODO: Add months parameter.
         return self._get_data("insider-transactions-summarized")
 
     @property
