@@ -8,7 +8,12 @@
     <a href="https://travis-ci.com/ratherbland/quantel" target="_blank">
         <img src="https://travis-ci.com/ratherbland/quantel.svg?branch=master" alt="Build Status">
     </a>
-<a href="https://www.codefactor.io/repository/github/ratherbland/quantel"><img src="https://www.codefactor.io/repository/github/ratherbland/quantel/badge" alt="CodeFactor" /></a>
+<a href="https://www.codefactor.io/repository/github/ratherbland/quantel">
+    <img src="https://www.codefactor.io/repository/github/ratherbland/quantel/badge" alt="CodeFactor" />
+</a>
+<a href="https://app.codecov.io/gh/RatherBland/Quantel">
+    <img src="https://img.shields.io/codecov/c/github/ratherbland/Quantel" alt="Coverage">
+</a>
 </p>
 
 
