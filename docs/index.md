@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="img/quantel.png">
+    <img src="https://raw.githubusercontent.com/RatherBland/Quantel/master/docs/img/quantel.png">
 </p>
 <p align="center">
     <em>Official Python Library for the Quantel Finance API</em>
@@ -8,18 +8,21 @@
     <a href="https://travis-ci.com/ratherbland/quantel" target="_blank">
         <img src="https://travis-ci.com/ratherbland/quantel.svg?branch=master" alt="Build Status">
     </a>
+<a href="https://www.codefactor.io/repository/github/ratherbland/quantel"><img src="https://www.codefactor.io/repository/github/ratherbland/quantel/badge" alt="CodeFactor" /></a>
 </p>
 
+
+
 ---
+**Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
 
 **Documentation**: <a target="_blank" href="https://quantel.io/docs">quantel.io/docs </a>
 
 **Blog Posts**: WIP
 
-**Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
+**Source Code**: <a href="https://github.com/ratherbland/Quantel">ratherbland/Quantel </a>
 
 **Get API Key**: <a href="http://links.quantel.io/getstarted">links.quantel.io/getstarted </a>
-
 
 ---
 
@@ -80,7 +83,7 @@ faang.profile
 
 ## International Example
 
-Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at [quantel.io/docs/](https://quantel.io/docs/)
+Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at [quantel.io/docs/](https://quantel.io/docs)
 
 ```python
 from quantel import Quantel

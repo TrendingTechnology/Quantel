@@ -27,5 +27,5 @@ setup(
         "Intended Audience :: Financial and Insurance Industry",
         "Operating System :: OS Independent",
     ],
-    keywords="quantel, finance, stocks, mutual funds, etfs, insider transactions",
+    keywords="quantel, finance, stocks, mutual funds, etfs, insider transactions, financial data",
 )
