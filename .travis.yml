@@ -7,16 +7,17 @@ python:
 
 before_install:
   - pip install codecov
-  - pip install pytest==6.2.4
+  - pip install -u pytest
   - pip install attrs==21.2.0
   - pip install pytest-cov
-  - pip install .
+
 
 install:
   - pip install -r requirements.txt
+  - pip install .
 
 script:
-  - pytest --cov=./
+  - pytest
 
 after_success:
   - codecov
