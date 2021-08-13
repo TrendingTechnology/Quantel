@@ -7,7 +7,7 @@ python:
 
 before_install:
   - pip install codecov
-  - pip install -u pytest
+  - pip install -U pytest
   - pip install attrs==21.2.0
   - pip install pytest-cov
 
