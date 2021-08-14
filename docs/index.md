@@ -66,7 +66,7 @@ qt = Quantel(api_key="<quantel-api-key>")
 goog = qt.ticker('goog')
 
 # Retrieve company profile
-goog.profile
+goog.profile()
 ```
 
 ## Multiple Symbol Example
@@ -82,7 +82,7 @@ symbols = ['fb', 'aapl', 'amzn', 'nflx', 'goog']
 
 faang = qt.ticker(symbols)
 
-faang.profile
+faang.profile()
 ```
 
 
@@ -99,7 +99,7 @@ symbols = ['DHER.DE', 'CBA.AX', 'DNB.OL', 'NESN.SW', 'ULVR.L', 'SHOP.TO', 'EDF.P
 
 international = qt.ticker(symbols)
 
-international.balance_sheet
+international.balance_sheet()
 ```
 
 ## Asynchronous Example
@@ -113,7 +113,7 @@ qt = Quantel(api_key="<quantel-api-key>")
 
 goog = qt.ticker('goog', asynchronous=True)
 
-goog.profile
+goog.profile()
 ```
 
 ## License
