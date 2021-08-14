@@ -75,6 +75,25 @@ class _Ticker:
         """
         Get income statements
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
+
         Returns:
 
         """
@@ -84,6 +103,25 @@ class _Ticker:
         """
         Get income statements growth
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
+
         Returns:
         """
         return self._get_data("income-statement-growth")
@@ -91,6 +129,25 @@ class _Ticker:
     def balance_sheet(self) -> List[Dict]:
         """
         Get balance sheets
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
 
         Returns:
         """
@@ -100,6 +157,25 @@ class _Ticker:
         """
         Get balance sheets growth
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
+
         Returns:
         """
         return self._get_data("balance-sheet-statement-growth")
@@ -107,6 +183,25 @@ class _Ticker:
     def cash_flow(self) -> List[Dict]:
         """
         Get cash flow statements
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
 
         Returns:
         """
@@ -116,6 +211,25 @@ class _Ticker:
         """
         Get cash flow statements growth
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
+
         Returns:
         """
         return self._get_data("cash-flow-statement-growth")
@@ -123,6 +237,24 @@ class _Ticker:
     def ratios(self) -> List[Dict]:
         """
         Get key financial ratios
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+
+        Not supported.
+
+        - OSE (Oslo Stock Exchange)
 
         Returns:
         """
@@ -132,6 +264,24 @@ class _Ticker:
         """
         Get enterprise values
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+
+        Not supported.
+
+        - OSE (Oslo Stock Exchange)
+
         Returns:
         """
         return self._get_data("enterprise-values")
@@ -139,6 +289,25 @@ class _Ticker:
     def key_metrics(self) -> List[Dict]:
         """
         Get key financial metrics
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
 
         Returns:
         """
@@ -148,6 +317,25 @@ class _Ticker:
         """
         Get analyst estimates of key financial figures
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not supported.
+
+        - N/A
+
         Returns:
         """
         return self._get_data("analyst-estimates")
@@ -155,6 +343,24 @@ class _Ticker:
     def shares_float(self) -> List[Dict]:
         """
         Get shares float and outstanding
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+
+        Not supported.
+
+        - OSE (Oslo Stock Exchange)
 
         Returns:
         """
@@ -164,6 +370,24 @@ class _Ticker:
         """
         Get up to date quote
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+
+        Not supported.
+
+        - OSE (Oslo Stock Exchange)
+
         Returns:
         """
         return self._get_data("quote")
@@ -172,6 +396,24 @@ class _Ticker:
         """
         Get company profile
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+
+        Not Supported.
+
+        - OSE (Oslo Stock Exchange)
+
         Returns:
         """
         return self._get_data("profile")
@@ -179,6 +421,23 @@ class _Ticker:
     def insider_transactions(self, months: int = None) -> List[Dict]:
         """
         Get all insider transactions
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+
+        Not supported.
+
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
 
         Returns:
         """
@@ -190,6 +449,23 @@ class _Ticker:
         """
         Get insider transactions summarized
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+
+        Not supported.
+
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+
         Returns:
         """
         # TODO: Add months parameter.
@@ -199,6 +475,25 @@ class _Ticker:
         """
         Get share owning groups
 
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not Supported.
+
+        - N/A
+
         Returns:
         """
         return self._get_data("share-ownership")
@@ -206,6 +501,25 @@ class _Ticker:
     def key_executives(self) -> List[Dict]:
         """
         Get key executives in org
+
+        Exchanges supported
+
+        - NASDAQ
+        - NYSE (New York Stock Exchange)
+        - XETRA (German Electronic Exchange)
+        - ASX (Australian Stock Exchange)
+        - TSX (Toronto Stock Exchange)
+        - ENX (EuroNext)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - MOEX (Moscow Stock Exchange)
+        - HKEX (Hong Kong Stock Exchange)
+        - SIX (Swiss Stock Exchange)
+        - OSE (Oslo Stock Exchange)
+
+        Not Supported.
+
+        - N/A
 
         Returns:
         """

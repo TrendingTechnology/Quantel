@@ -13,7 +13,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.profile
+    goog.profile()
     ```
 
 === "Data"
@@ -84,7 +84,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.analyst_estimates
+    goog.analyst_estimates()
     ```
 
 === "Data"
@@ -130,7 +130,17 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.insider_transactions
+    goog.insider_transactions()
+    ```
+    
+    ```python
+    from quantel import Quantel
+
+    qt = Quantel(api_key="<your-quantel-api-key>")
+
+    goog = qt.ticker('goog')
+    # Only returns the last 6 months of insider transactions
+    goog.insider_transactions(months=6)
     ```
 
 === "Data"
@@ -194,7 +204,17 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.insider_transactions_summarized
+    goog.insider_transactions_summarized()
+    ```
+    
+    ```python
+    from quantel import Quantel
+
+    qt = Quantel(api_key="<your-quantel-api-key>")
+
+    goog = qt.ticker('goog')
+    # Only summarizes the last 6 months of insider transactions
+    goog.insider_transactions_summarized(months=6)
     ```
 
 === "Data"
@@ -225,7 +245,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.share_ownership
+    goog.share_ownership()
     ```
 
 === "Data"
@@ -259,7 +279,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.shares_float
+    goog.shares_float()
     ```
 
 === "Data"
@@ -288,7 +308,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.key_executives
+    goog.key_executives()
     ```
 
 === "Data"

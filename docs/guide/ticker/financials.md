@@ -13,7 +13,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.quote
+    goog.quote()
     ```
 
 === "Data"
@@ -59,7 +59,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.balance_sheet
+    goog.balance_sheet()
     ```
 
 === "Data"
@@ -131,7 +131,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.balance_sheet_growth
+    goog.balance_sheet_growth()
     ```
 
 === "Data"
@@ -198,7 +198,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.income_statement
+    goog.income_statement()
     ```
 
 === "Data"
@@ -255,7 +255,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.income_statement_growth
+    goog.income_statement_growth()
     ```
 
 === "Data"
@@ -308,7 +308,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.cash_flow
+    goog.cash_flow()
     ```
 
 === "Data"
@@ -368,7 +368,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.cash_flow_growth
+    goog.cash_flow_growth()
     ```
 
 === "Data"
@@ -425,7 +425,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.ratios
+    goog.ratios()
     ```
 
 === "Data"
@@ -506,7 +506,7 @@
     qt = Quantel(api_key="<your-quantel-api-key>")
 
     goog = qt.ticker('goog')
-    goog.key_metrics
+    goog.key_metrics()
     ```
 
 === "Data"

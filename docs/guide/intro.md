@@ -61,6 +61,6 @@ symbols = 'fb aapl amzn nflx goog'
 tickers = qt.ticker(symbols)
 
 # Retrieve each company's profile information
-data = tickers.profile
+data = tickers.profile()
 ```
 
