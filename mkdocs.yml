@@ -10,7 +10,7 @@ theme:
     repo: fontawesome/brands/github-alt
   font:
     text: PT Sans
-  logo: https://quantel.io/images/icon.png
+  logo: https://github.com/ratherbland/Quantel/tree/master/docs/img/logo-white-transparent.png
 
 plugins:
   - search
