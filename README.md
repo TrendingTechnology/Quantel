@@ -8,15 +8,14 @@
     <a href="https://travis-ci.com/ratherbland/quantel" target="_blank">
         <img src="https://travis-ci.com/ratherbland/quantel.svg?branch=master" alt="Build Status">
     </a>
-<a href="https://www.codefactor.io/repository/github/ratherbland/quantel">
+<a href="https://www.codefactor.io/repository/github/ratherbland/quantel" target="_blank">
     <img src="https://www.codefactor.io/repository/github/ratherbland/quantel/badge" alt="CodeFactor" />
 </a>
-<a href="https://app.codecov.io/gh/RatherBland/Quantel">
+<a href="https://app.codecov.io/gh/RatherBland/Quantel" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/ratherbland/Quantel" alt="Coverage">
 </a>
-<a href="https://app.codecov.io/gh/RatherBland/Quantel">
-    <img src="https://static.pepy.tech/personalized-badge/quantel?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads
-" alt="Downloads">
+<a href="https://pepy.tech/project/quantel" target="_blank">
+    <img src="https://pepy.tech/badge/quantel" alt="Downloads">
 </a>
 </p>
 
