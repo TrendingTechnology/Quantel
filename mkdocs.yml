@@ -1,5 +1,5 @@
 site_name: Quantel
-site_url: https://quantel.io
+site_url: https://quantel.io/docs/python/
 
 repo_name: Quantel
 repo_url: https://github.com/ratherbland/Quantel
@@ -10,7 +10,8 @@ theme:
     repo: fontawesome/brands/github-alt
   font:
     text: PT Sans
-  logo: https://github.com/ratherbland/Quantel/tree/master/docs/img/logo-white-transparent.png
+  logo: https://quantel.io/images/logo-white-transparent.png
+  favicon: https://quantel.io/images/icon.png
 
 plugins:
   - search
