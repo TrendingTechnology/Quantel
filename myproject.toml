@@ -24,7 +24,7 @@ requires = [
 description-file = "README.md"
 
 [tool.flit.metadata.urls]
-Documentation = "https://quantel.io/docs"
+Documentation = "http://links.quantel.io/python-docs"
 
 [tool.flit.metadata.requires-extra]
 test = [

@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="quantel",
-    version="0.1",
+    version="0.2",
     author="Guy M",
     author_email="guy@quantel.io",
     description="Interact with the Quantel Finance API",
@@ -28,4 +28,8 @@ setup(
         "Operating System :: OS Independent",
     ],
     keywords="quantel, finance, stocks, mutual funds, etfs, insider transactions, financial data",
+    project_urls={
+        'Documentation': 'http://links.quantel.io/python-docs',
+        'Source': 'https://github.com/ratherbland/quantel',
+    },
 )

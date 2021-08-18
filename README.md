@@ -14,11 +14,9 @@
 <a href="https://app.codecov.io/gh/RatherBland/Quantel">
     <img src="https://img.shields.io/codecov/c/github/ratherbland/Quantel" alt="Coverage">
 </a>
-
-
 <a href="https://app.codecov.io/gh/RatherBland/Quantel">
     <img src="https://static.pepy.tech/personalized-badge/quantel?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads
-" alt="Coverage">
+" alt="Downloads">
 </a>
 </p>
 
