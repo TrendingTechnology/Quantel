@@ -26,7 +26,7 @@
 
 **Documentation**: <a target="_blank" href="https://quantel.io/docs/python">quantel.io/docs/python </a>
 
-**Blog Posts**: WIP
+**Blog Posts**: <a href="https://medium.com/@ratherbland/the-most-powerful-python-finance-library-youve-never-heard-of-f13f2cdfcc9a"> The Most Powerful Python Finance Library You’ve Never Heard Of </a>
 
 **Source Code**: <a href="https://github.com/ratherbland/Quantel">ratherbland/Quantel </a>
 
