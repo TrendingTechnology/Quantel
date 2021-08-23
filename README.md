@@ -24,7 +24,7 @@
 ---
 **Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
 
-**Documentation**: <a target="_blank" href="https://quantel.io/docs">quantel.io/docs </a>
+**Documentation**: <a target="_blank" href="https://quantel.io/docs/python">quantel.io/docs/python </a>
 
 **Blog Posts**: WIP
 

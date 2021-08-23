@@ -533,7 +533,7 @@ class Quantel(object):
         Authenticate with the Quantel Finance API
 
         Args:
-            api_key: Quantel Finance API Key
+            api_key: Quantel Finance API Key - http://links.quantel.io/getstarted
             validate: Validate API Key
 
         Example:
@@ -552,7 +552,7 @@ class Quantel(object):
 
         headers = {
             "x-rapidapi-key": self.api_key,
-            "user-agent": "Quantel Python Library v0.1"
+            "user-agent": "Quantel Python Library"
         }
         res = requests.get(self.host, headers=headers)
 
