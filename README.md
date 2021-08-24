@@ -19,6 +19,18 @@
 </a>
 </p>
 
+---
+
+**Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
+
+**Documentation**: <a target="_blank" href="https://quantel.io/docs/python">quantel.io/docs/python </a>
+
+**Blog Posts**: <a href="https://medium.com/@ratherbland/the-most-powerful-python-finance-library-youve-never-heard-of-f13f2cdfcc9a"> The Most Powerful Python Finance Library You’ve Never Heard Of </a>
+
+**Source Code**: <a href="https://github.com/ratherbland/Quantel">ratherbland/Quantel </a>
+
+**Get API Key**: <a href="http://links.quantel.io/getstarted">links.quantel.io/getstarted </a>
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -35,20 +47,9 @@
 - [Contact](#contact)
 
 
-## Links
-
-**Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
-
-**Documentation**: <a target="_blank" href="https://quantel.io/docs/python">quantel.io/docs/python </a>
-
-**Blog Posts**: <a href="https://medium.com/@ratherbland/the-most-powerful-python-finance-library-youve-never-heard-of-f13f2cdfcc9a"> The Most Powerful Python Finance Library You’ve Never Heard Of </a>
-
-**Source Code**: <a href="https://github.com/ratherbland/Quantel">ratherbland/Quantel </a>
-
-**Get API Key**: <a href="http://links.quantel.io/getstarted">links.quantel.io/getstarted </a>
-
-
 ## Overview
+
+Quantel is a powerful financial data and insights API. It provides easy access to world-class financial information. Quantel goes beyond just financial statements, giving users valuable information like insider transactions, major shareholder transactions, share ownership, peers, and so much more.
 
 Some features of Quantel:
 
