@@ -54,7 +54,8 @@ class _Ticker:
             res = await asyncio.gather(*tasks)
             return res
 
-    async def _get_data_async(self, session: aiohttp.ClientSession, endpoint: str, symbols: str, **kwargs) -> List[Dict]:
+    async def _get_data_async(self, session: aiohttp.ClientSession, endpoint: str, symbols: str, **kwargs) -> List[
+        Dict]:
         async with session.get(f"{self.host}{endpoint}/{symbols}", params=kwargs) as response:
             if self._check_status(response.status):
                 return await response.json()
@@ -85,10 +86,11 @@ class _Ticker:
             status_code: HTTP response code
         """
 
-        if status_code == 200:
-            return True
-        elif status_code == 429:
-            raise TooManyRequests("You may have exceeded the MONTHLY quota for your current plan. Upgrade your plan at http://links.quantel.io/upgrade")
+        if status_code == 429:
+            raise TooManyRequests(
+                "You may have exceeded the MONTHLY quota for your current plan. Upgrade your plan at http://links.quantel.io/upgrade")
+
+        return True
 
     def _chunks(self, l, n):
         n = max(1, n)
@@ -584,11 +586,7 @@ class Quantel(object):
                 "Unable to connect to the API server. If the error persists, please reach out to the team at contact@quantel.io"
             )
 
-        elif res.status_code == 404:
-            """
-            404 not found indicates that RapidAPI accepted the API key in this case.
-            """
-            return True
+        return True
 
     def ticker(self, symbols: Union[list, str], asynchronous: bool = False) -> _Ticker:
         """

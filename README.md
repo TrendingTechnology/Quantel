@@ -19,9 +19,25 @@
 </a>
 </p>
 
+## Table of Contents
 
+- [Overview](#overview)
+- [Support For Major Exchanges.](#support-for-major-exchanges)
+- [Setup](#setup)
+  * [Requirements](#requirements)
+  * [Installation](#installation)
+- [Examples](#examples)
+  * [Basic Example](#basic-example)
+  * [Multiple Symbol Example](#multiple-symbol-example)
+  * [International Example](#international-example)
+  * [Asynchronous Example](#asynchronous-example)
+- [License](#license)
+- [Contact](#contact)
 
 ---
+
+## Links
+
 **Website**: <a target="_blank" href="https://quantel.io">quantel.io </a>
 
 **Documentation**: <a target="_blank" href="https://quantel.io/docs/python">quantel.io/docs/python </a>
@@ -43,20 +59,47 @@ Some features of Quantel:
 - **Lightweight**: Minimal reliance on third party packages
 - **Powerful**: 40+ years of historical financial data for almost 25k thousand companies across the globe
 
-## Requirements
+---
+
+## Support For Major Exchanges.
+**Americas**
+* NASDAQ
+* New York Stock Exchange (NYSE)
+* Toronto Stock Exchange (TSX)
+
+**Asia Pacific**
+* Australian Stock Exchange (ASX)
+* Hong Kong Stock Exchange (HKEX)
+* National Indian Stock Exchange (NSE)
+
+**Europe**
+* German Electronic Exchange (XETRA)
+* EuroNext (ENX)
+* London Stock Exchange (LSE)
+* Moscow Stock Exchange (MOEX)
+* Oslo Stock Exchange (OSE)
+* Swiss Stock Exchange (SIX)
+
+---
+
+## Setup
+
+### Requirements
 
 Python 3.6+
 
 - [Requests](https://requests.readthedocs.io/en/master/) - The elegant and simple HTTP library for Python, built for human beings.
 - [Aiohttp](https://docs.aiohttp.org/en/stable/) - Asynchronous HTTP Client/Server for asyncio and Python.
 
-## Installation
+### Installation
 
 ```bash
 pip install quantel
 ```
 
-## Example
+## Examples
+
+### Basic Example
 
 
 ```python
@@ -72,7 +115,7 @@ goog = qt.ticker('goog')
 goog.profile()
 ```
 
-## Multiple Symbol Example
+### Multiple Symbol Example
 
 The `ticker` class also makes it easy to retrieve data for a list of symbols with the same API. Simply pass a list of symbols as the argument to the `ticker` class.
 
@@ -89,7 +132,7 @@ faang.profile()
 ```
 
 
-## International Example
+### International Example
 
 Quantel supports the majority of international exchanges. Read more about what data is supported by which exchanges at [quantel.io/docs/](https://quantel.io/docs)
 
@@ -105,7 +148,7 @@ international = qt.ticker(symbols)
 international.balance_sheet()
 ```
 
-## Asynchronous Example
+### Asynchronous Example
 
 It really is that simple. Set `asynchronous=True` when instantiating the ticker class.
 
@@ -125,4 +168,6 @@ This project is licensed under the terms of the MIT license.
 
 ---
 
+
+## Contact
 Questions can be raised directly via <a href="mailto:guy@quantel.io">guy@quantel.io</a>
