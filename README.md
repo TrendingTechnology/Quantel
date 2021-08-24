@@ -34,7 +34,6 @@
 - [License](#license)
 - [Contact](#contact)
 
----
 
 ## Links
 
@@ -48,7 +47,6 @@
 
 **Get API Key**: <a href="http://links.quantel.io/getstarted">links.quantel.io/getstarted </a>
 
----
 
 ## Overview
 
@@ -59,7 +57,6 @@ Some features of Quantel:
 - **Lightweight**: Minimal reliance on third party packages
 - **Powerful**: 40+ years of historical financial data for almost 25k thousand companies across the globe
 
----
 
 ## Support For Major Exchanges.
 **Americas**
@@ -80,7 +77,6 @@ Some features of Quantel:
 * Oslo Stock Exchange (OSE)
 * Swiss Stock Exchange (SIX)
 
----
 
 ## Setup
 
@@ -165,8 +161,6 @@ goog.profile()
 ## License
 
 This project is licensed under the terms of the MIT license.
-
----
 
 
 ## Contact
