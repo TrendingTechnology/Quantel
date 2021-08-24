@@ -483,7 +483,6 @@ class _Ticker:
             months: Get transactions by last n months
 
         """
-        # TODO: Add months parameter.
         return self._get_data("insider-transactions-summarized", months=months)
 
     def share_ownership(self) -> List[Dict]:
@@ -562,6 +561,14 @@ class Quantel(object):
             self._validate_api()
 
     def _validate_api(self) -> bool:
+        """
+        401 is an Unauthorized status code.
+        403 is an Access Forbidden code.
+
+        Both indicate that the API key was not accepted by RapidAPI
+
+        503 indicates that the API gateway could not be reached.
+        """
 
         headers = {
             "x-rapidapi-key": self.api_key,
@@ -570,12 +577,7 @@ class Quantel(object):
         res = requests.get(self.host, headers=headers)
 
         if res.status_code in (401, 403):
-            """
-            401 is an Unauthorized status code. 
-            403 is an Access Forbidden code.
-            
-            Both indicate that the API key was not accepted by RapidAPI
-            """
+
             raise InvalidAPIKey(
                 "Your API Key is invalid. You may have entered your API Key incorrectly, or have not subscribed to the API.\n"
                 "https://quantel.io/faq#invalid_api_key")
