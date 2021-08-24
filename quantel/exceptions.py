@@ -4,3 +4,7 @@ class InvalidAPIKey(Exception):
 
 class GatewayError(Exception):
     pass
+
+
+class TooManyRequests(Exception):
+    pass

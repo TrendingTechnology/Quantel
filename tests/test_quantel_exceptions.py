@@ -13,7 +13,7 @@ def test_invalid_api_key():
         goog = qt.ticker('goog')
 
 
-class MockResponse:
+class MockGatewayResponse:
     status_code = 503
 
 
@@ -23,7 +23,7 @@ def test_gateway_error(monkeypatch):
     """
 
     def mock_get(*args, **kwargs):
-        return MockResponse()
+        return MockGatewayResponse()
 
     # apply the monkeypatch for requests.get to mock_get
     monkeypatch.setattr(requests, "get", mock_get)
@@ -31,3 +31,44 @@ def test_gateway_error(monkeypatch):
     with pytest.raises(exceptions.GatewayError):
         qt = Quantel(api_key="000")
         goog = qt.ticker('goog')
+
+
+class MockTooManyRequestsResponse:
+    status_code = 429
+
+
+class MockValidAPIKey:
+    status_code = 200
+
+
+@pytest.fixture()
+def valid_api_key(monkeypatch):
+
+    def mock_get(*args, **kwargs):
+        return MockValidAPIKey()
+
+    # apply the monkeypatch for requests.get to mock_get
+    monkeypatch.setattr(requests, "get", mock_get)
+
+    qt = Quantel(api_key="000")
+    goog = qt.ticker('goog')
+
+    return goog
+
+
+def test_too_many_requests_error(monkeypatch, valid_api_key):
+    """
+    Test 429 Too Many Requests error
+    """
+
+    def mock_get(*args, **kwargs):
+        return MockTooManyRequestsResponse()
+
+    # apply the monkeypatch for requests.get to mock_get
+    monkeypatch.setattr(requests.Session, "get", mock_get)
+
+    with pytest.raises(exceptions.TooManyRequests):
+
+        goog = valid_api_key
+
+        print(goog.profile())

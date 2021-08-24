@@ -68,3 +68,10 @@ def test_quantel_insider_transactions_summarized():
 
 def test_quantel_share_ownership():
     assert 'GOOG' in goog.share_ownership()[0]['symbol']
+
+
+async_goog = qt.ticker('goog', asynchronous=True)
+
+
+def test_quantel_async_profile():
+    assert 'GOOG' in async_goog.profile()[0]['symbol']

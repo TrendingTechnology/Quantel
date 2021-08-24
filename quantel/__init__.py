@@ -4,7 +4,7 @@ from typing import Union, List, Dict
 import aiohttp
 import requests
 
-from quantel.exceptions import InvalidAPIKey, GatewayError
+from quantel.exceptions import InvalidAPIKey, GatewayError, TooManyRequests
 
 
 class _Ticker:
@@ -19,7 +19,17 @@ class _Ticker:
 
         self.symbols = list(self._chunks(symbols, 30))
 
-    def _get_data(self, endpoint, **kwargs) -> List[Dict]:
+    def _get_data(self, endpoint: str, **kwargs) -> List[Dict]:
+        """
+
+
+        Args:
+            endpoint: Quantel API endpoint
+        Kwargs:
+            months: Filter results by last n months (insider_transactions & insider_transactions_summarized)
+
+
+        """
 
         headers = {
             "x-rapidapi-key": self.api_key,
@@ -35,7 +45,7 @@ class _Ticker:
         flat = [x for sublist in result for x in sublist]
         return flat
 
-    async def _submit_async(self, headers, endpoint, **kwargs):
+    async def _submit_async(self, headers: dict, endpoint: str, **kwargs):
         async with aiohttp.ClientSession(headers=headers) as session:
             tasks = []
             for chunk in self.symbols:
@@ -44,12 +54,12 @@ class _Ticker:
             res = await asyncio.gather(*tasks)
             return res
 
-    async def _get_data_async(self, session, endpoint, symbols, **kwargs):
+    async def _get_data_async(self, session: aiohttp.ClientSession, endpoint: str, symbols: str, **kwargs) -> List[Dict]:
         async with session.get(f"{self.host}{endpoint}/{symbols}", params=kwargs) as response:
-            if response.status == 200:
+            if self._check_status(response.status):
                 return await response.json()
 
-    def _submit_sync(self, headers, endpoint, **kwargs):
+    def _submit_sync(self, headers: dict, endpoint: str, **kwargs):
         tasks = []
 
         session = requests.Session()
@@ -60,12 +70,25 @@ class _Ticker:
 
         return tasks
 
-    def _get_data_sync(self, session, endpoint, symbols, **kwargs):
+    def _get_data_sync(self, session: requests.Session, endpoint: str, symbols: str, **kwargs) -> List[Dict]:
 
         res = session.get(f"{self.host}{endpoint}/{symbols}", params=kwargs)
 
-        if res.status_code == 200:
+        if self._check_status(res.status_code):
             return res.json()
+
+    def _check_status(self, status_code: int) -> bool:
+        """
+        Check the status code from response
+
+        Args:
+            status_code: HTTP response code
+        """
+
+        if status_code == 200:
+            return True
+        elif status_code == 429:
+            raise TooManyRequests("You may have exceeded the MONTHLY quota for your current plan. Upgrade your plan at http://links.quantel.io/upgrade")
 
     def _chunks(self, l, n):
         n = max(1, n)
@@ -94,8 +117,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
-
         """
         return self._get_data("income-statement")
 
@@ -122,7 +143,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("income-statement-growth")
 
@@ -149,7 +169,8 @@ class _Ticker:
 
         - N/A
 
-        Returns:
+        # TODO: Add period parameter to financial statements
+
         """
         return self._get_data("balance-sheet-statement")
 
@@ -176,7 +197,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("balance-sheet-statement-growth")
 
@@ -203,7 +223,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("cash-flow-statement")
 
@@ -230,7 +249,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("cash-flow-statement-growth")
 
@@ -256,7 +274,6 @@ class _Ticker:
 
         - OSE (Oslo Stock Exchange)
 
-        Returns:
         """
         return self._get_data("ratios")
 
@@ -282,7 +299,6 @@ class _Ticker:
 
         - OSE (Oslo Stock Exchange)
 
-        Returns:
         """
         return self._get_data("enterprise-values")
 
@@ -309,7 +325,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("key-metrics")
 
@@ -336,7 +351,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("analyst-estimates")
 
@@ -362,7 +376,6 @@ class _Ticker:
 
         - OSE (Oslo Stock Exchange)
 
-        Returns:
         """
         return self._get_data("shares-float")
 
@@ -388,7 +401,6 @@ class _Ticker:
 
         - OSE (Oslo Stock Exchange)
 
-        Returns:
         """
         return self._get_data("quote")
 
@@ -414,7 +426,6 @@ class _Ticker:
 
         - OSE (Oslo Stock Exchange)
 
-        Returns:
         """
         return self._get_data("profile")
 
@@ -428,21 +439,21 @@ class _Ticker:
         - NYSE (New York Stock Exchange)
         - XETRA (German Electronic Exchange)
         - ASX (Australian Stock Exchange)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - TSX (Toronto Stock Exchange)
 
         Not supported.
 
-        - TSX (Toronto Stock Exchange)
         - ENX (EuroNext)
-        - NSE (National Stock Exchange of India)
-        - LSE (London Stock Exchange)
         - MOEX (Moscow Stock Exchange)
         - HKEX (Hong Kong Stock Exchange)
         - SIX (Swiss Stock Exchange)
 
-        Returns:
+        Args:
+            months: Get transactions by last n months
         """
 
-        # TODO: Add months parameter.
         return self._get_data("insider-transactions", months=months)
 
     def insider_transactions_summarized(self, months: int = None) -> List[Dict]:
@@ -455,18 +466,20 @@ class _Ticker:
         - NYSE (New York Stock Exchange)
         - XETRA (German Electronic Exchange)
         - ASX (Australian Stock Exchange)
+        - NSE (National Stock Exchange of India)
+        - LSE (London Stock Exchange)
+        - TSX (Toronto Stock Exchange)
 
         Not supported.
 
-        - TSX (Toronto Stock Exchange)
         - ENX (EuroNext)
-        - NSE (National Stock Exchange of India)
-        - LSE (London Stock Exchange)
         - MOEX (Moscow Stock Exchange)
         - HKEX (Hong Kong Stock Exchange)
         - SIX (Swiss Stock Exchange)
 
-        Returns:
+        Args:
+            months: Get transactions by last n months
+
         """
         # TODO: Add months parameter.
         return self._get_data("insider-transactions-summarized", months=months)
@@ -494,7 +507,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("share-ownership")
 
@@ -521,7 +533,6 @@ class _Ticker:
 
         - N/A
 
-        Returns:
         """
         return self._get_data("key-executives")
 
